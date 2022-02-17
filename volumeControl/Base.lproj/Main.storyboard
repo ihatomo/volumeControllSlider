@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXm-SZ-2fK">
+                                <rect key="frame" x="167" y="433" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="0Z6-Uo-gbE"/>
+                                    <constraint firstAttribute="height" constant="30" id="RlF-Md-gx2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jtt-6Z-5Ni">
+                                <rect key="frame" x="156.5" y="139" width="101" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="BTt-KD-Hde"/>
+                                    <constraint firstAttribute="height" constant="31" id="Dr6-dz-jGN"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                                <connections>
+                                    <action selector="colorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Duw-gP-cMH"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jtt-6Z-5Ni" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="2W5-EW-ePR"/>
+                            <constraint firstItem="jtt-6Z-5Ni" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SIV-nX-fPd"/>
+                            <constraint firstItem="qXm-SZ-2fK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cVA-th-WYx"/>
+                            <constraint firstItem="qXm-SZ-2fK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d4L-vx-JZ3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorChangeController" destination="jtt-6Z-5Ni" id="c2r-Ag-FZp"/>
+                        <outlet property="volumeLabel" destination="qXm-SZ-2fK" id="EKR-Qb-vPV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113.04347826086958" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
